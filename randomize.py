@@ -3,11 +3,8 @@ import random
 print("Who is involved? List all people in a txt file, add a linebreak after each person.")
 path = input("Path to your txt: ")
 print()
-
-f = open(path, 'r')
 with open(path) as f:
     people = f.read().splitlines()
-f.close()
 
 size = int(input("What's your preferred group size? "))
 
@@ -31,3 +28,4 @@ print()
 print("How about this?")
 for group in groups:
     print(" - " + ", ".join(group))
+print()
